@@ -1,0 +1,156 @@
+.trust-pilot-section > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.trust-pilot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.trust-pilot-heading {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.trust-pilot-rating-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2em
+}
+
+.trust-pilot-stars { white-space: nowrap; }
+
+.trust-pilot-header-text {
+    margin-bottom: 0;
+    font-size: 11px;
+    line-height: 1;
+}
+
+.trust-pilot-header-text a {
+    color: #0225af;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.trust-pilot-side-text {
+    margin-bottom: 0;
+    margin-left: 0.5em;
+    font-weight: 500;
+}
+
+.trust-pilot-control-buttons {
+    display: flex;
+    gap: 1em;
+    justify-content: right;
+    align-self: center;
+}
+
+.trust-pilot-control-buttons > button {
+    background-position: center;
+    background-size: 28px;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+}
+
+.trust-pilot-control-buttons > button.right-control {
+    background-image: url(../images/circle-chevron-right.svg);
+}
+
+.trust-pilot-control-buttons > button.left-control {
+    background-image: url(../images/circle-chevron-left.svg);
+    rotate: 180deg;
+}
+
+.reviews-container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.reviews-container > .trust-pilot-review {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1px solid #EEE;
+    background: #FFF;
+    padding: 1em 2em;
+    box-shadow: 0px 4px 4px 0px rgba(226, 226, 226, 0.25);
+    white-space: initial;
+    min-width: 28.5em;
+    min-height: 12em;
+    gap: 1em;
+}
+
+.reviews-container > .trust-pilot-review h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.reviews-container > .trust-pilot-review p {
+    color: #747474;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.trust-pilot-review > .author-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px #F2F2F2;
+    margin-top: auto;
+    padding-top: 1em;
+}
+
+.trust-pilot-review > .author-section p {
+    margin-bottom: 0;
+    color: #424242;
+}
+
+html[dir="rtl"] .trust-pilot-header,
+html[dir="rtl"] .trust-pilot-heading,
+html[dir="rtl"] .trust-pilot-control-buttons,
+html[dir="rtl"] .reviews-container {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .trust-pilot-rating-container { align-items: flex-end; }
+
+@media screen and (max-width: 768px) {
+    .reviews-container > .trust-pilot-review {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .trust-pilot-heading {
+        flex-direction: column;
+        gap: 0.5em;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .trust-pilot-header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+    .trust-pilot-rating-container {
+        align-items: center;
+    }
+    .reviews-container > .trust-pilot-review {
+        min-width: 100%;
+    }
+}
